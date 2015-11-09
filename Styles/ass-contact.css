@@ -1,0 +1,61 @@
+#contact-us-wrapper {
+  /* xs size */
+  /* Small devices (tablets, 768px and up) */
+  /* Medium devices (desktops, 992px and up) */
+  /* Large devices (large desktops, 1200px and up) */ }
+  #contact-us-wrapper dt {
+    font-weight: normal; }
+  #contact-us-wrapper label {
+    margin-bottom: 10px;
+    display: inline-block; }
+  #contact-us-wrapper .live-chat-button {
+    margin-top: 20px;
+    width: 100%; }
+  #contact-us-wrapper .right-col.contact {
+    min-width: 305px; }
+  #contact-us-wrapper .send-button {
+    margin-top: 20px;
+    width: 100%; }
+  #contact-us-wrapper .field-validation-error {
+    color: #ff0000;
+    float: right; }
+  #contact-us-wrapper div[class*=' pure-u-'] p {
+    margin: 0 10px 10px 0;
+    padding-top: 0; }
+  #contact-us-wrapper div[class*=' pure-u-'] div > input, #contact-us-wrapper div[class*=' pure-u-'] textarea {
+    margin-bottom: 20px;
+    border: solid 1px #f0f0f0;
+    border-radius: 6px;
+    box-shadow: inset 1.5px 2.598px 0 0 rgba(0, 0, 0, 0.03);
+    width: 98%; }
+  #contact-us-wrapper div[class*=' pure-u-'] div > input {
+    height: 48px; }
+  #contact-us-wrapper div[class*=' pure-u-'] div > textarea {
+    height: 100px;
+    resize: none; }
+  #contact-us-wrapper div[class*=' pure-u-'] button {
+    display: block;
+    float: right; }
+  #contact-us-wrapper .ass-content-container {
+    margin-bottom: 50px; }
+  #contact-us-wrapper .bordered {
+    color: #2F9BFF;
+    border-radius: 6px;
+    border: 2px solid #2F9BFF;
+    margin-top: 10px;
+    padding: 20px 0 20px 0;
+    max-width: 280px;
+    font-size: 20px;
+    font-weight: 400; }
+    #contact-us-wrapper .bordered span {
+      display: inline-block;
+      width: 70px;
+      margin-left: 35px; }
+  @media (max-width: 767px) {
+    #contact-us-wrapper div[class*=' pure-u-'] p {
+      padding-left: 0;
+      padding-right: 0; } }
+  @media (min-width: 992px) {
+    #contact-us-wrapper .right-col div.right {
+      float: right;
+      display: inline-block; } }

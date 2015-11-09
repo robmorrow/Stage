@@ -1,0 +1,43 @@
+﻿@using CWG.Web.Core.Helper
+@{
+    ViewBag.Title = "Thanks | AllStarSlots";
+}
+
+@section HeadScripts{
+    <link href="/Styles/ass-thankyou.css" rel="stylesheet" />
+}
+
+@section AlternateNav{
+    <div class="header">
+        <img src="~/Images/Common/logo.png" />
+        <h1 class="h-spacer">Thank you</h1>
+    </div>
+}
+
+@section AlternateHeader{
+    @*Empty section are left empty intentionally, so that those sections are not rendered on this page*@
+}
+
+@section AlternateReassuranceStrip{
+}
+
+<div class="content-wrapper">
+
+    <p>
+        Thanks for getting in touch.
+    </p>
+    <p>
+        We aim to answer all customer Emails within 24 hours.
+    </p>
+    <p class="small">
+        If you haven't heard back from us within 24 hours, our reply may be stuck in your email's Junk folder.
+        If you still can't find it, please get in touch through our 24/7 Live Chat or by Phone (Toll free)
+    </p>
+
+    <div class="buttons">
+        @Html.ActionLink("< Return To Home", "Index", "Home", null, new { @class = "light-blue bordered", @id="about-us-thanks-home" })
+    </div>
+</div>
+
+@section AlternateFooter{
+}

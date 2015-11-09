@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "Cash Out & Deposit Funds - Your Online Casino Cashier | AllStarSlots";
+    ViewBag.MetaDescription = "We offer a variety of fast, reliable and secure options for deposits & withdrawals. Playing & win instantly with streamlined, protected banking processes.";
+}
+
+<div id="cashier-wrapper" class="container-fluid ass-container">
+
+    <div class="ass-title">
+        <h1 class="h-spacer">Cashier</h1>
+        <p>
+            All Star Slots casino offers a variety of deposit methods to both fund your account and withdraw your winnings.
+            Please refer to the tables below for details on min and max amounts as well as time expectancies for each of our supported payment methods.
+        </p>
+    </div>
+    <h2 class="ass-fade h-spacer">Depositing</h2>
+
+    <div data-bind="foreach: depositMethods" class="ass-content-container">
+        <div class="pure-g payment-item">
+            <h5 class="pure-u-1" data-bind="text:Method"></h5>
+            <div class="pure-u-md-5-24 metric-image">
+                <img class="pure-img" data-bind="attr: { src: '/Images/Cashier/' + Method.toLowerCase().replace(' ', '') + '.png' }" />
+            </div>
+            <div class="pure-u-md-18-24 pure-u-1">
+                <div class="metric-entry">
+                    <div class="metric-pre-label">Time Taken</div>
+                    <div data-bind="text:TimeTaken" class="metric-post-label"></div>
+                    <div data-bind="foreach: new Array(TimeTakenInDays)" class="metric-bar">
+                        <div class="granular"></div>
+                    </div>
+                </div>
+
+                <div class="metric-entry">
+                    <div class="metric-pre-label">Min</div>
+                    <div data-bind="text:'$' + MinAmountValue" class="metric-post-label"></div>
+                    <div class="metric-bar">
+                        <div class="bar" data-bind="style:{width:$parent.calculateMaximumPercentage(MinAmountValue) + '%'}"></div>
+                    </div>
+                </div>
+
+                <div class="metric-entry">
+                    <div class="metric-pre-label">Max</div>
+                    <div data-bind="text: '$' + MaxAmountValue" class="metric-post-label"></div>
+                    <div class="metric-bar">
+                        <div class="bar" data-bind="style: { 'width':$parent.calculateMaximumPercentage(MaxAmountValue)+ '%'}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="h-spacer">Withdrawals</h2>
+    <p>
+        We pride ourselves on our fast payments and endeavour to process all withdrawals by the next working day.
+        Withdrawals will be returned by the payment method that was used in order to fund the account wherever this is possible.
+    </p>
+
+
+    <h2 class="ass-fade h-spacer">Withdrawing</h2>
+    <div data-bind="foreach: withdrawalMethods" class="ass-content-container">
+        <div class="pure-g payment-item">
+            <h5 class="pure-u-1" data-bind="text:Method"></h5>
+            <div class="pure-u-5-24 metric-image">
+                <img class="pure-img" data-bind="attr: { src: '/Images/Cashier/' + Method.toLowerCase().replace(' ', '') + '.png' }" />
+            </div>
+            <div class="pure-u-md-18-24 pure-u-1">
+                <div class="metric-entry">
+                    <div class="metric-pre-label">Time Taken</div>
+                    <div data-bind="text:TimeTaken" class="metric-post-label"></div>
+                    <div data-bind="foreach: new Array(TimeTakenInDays)" class="metric-bar">
+                        <div class="granular"></div>
+                    </div>
+                </div>
+
+                <div class="metric-entry">
+                    <div class="metric-pre-label">Min</div>
+                    <div data-bind="text:'$' + MinAmountValue" class="metric-post-label"></div>
+                    <div class="metric-bar">
+                        <div class="bar" data-bind="style:{width:$parent.calculateMaximumPercentage(MinAmountValue) + '%'}"></div>
+                    </div>
+                </div>
+
+                <div class="metric-entry">
+                    <div class="metric-pre-label">Max</div>
+                    <div data-bind="text: '$' + MaxAmountValue" class="metric-post-label"></div>
+                    <div class="metric-bar">
+                        <div class="bar" data-bind="style: { 'width':$parent.calculateMaximumPercentage(MaxAmountValue)+ '%'}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="h-spacer">Verification</h2>
+
+    <p>
+        Please note that we require all of our players to complete our verification process before any withdrawals can be processed.
+        This is a common procedure in order to stop fraud and keep your account safe.
+        You will only need to do this once. After this you will be able to enjoy our fast cash-out process when withdrawing your All Star Slots winnings!
+    </p>
+
+    <p>Once you have signed up, in order for us to verify your account, we require that you send the following four items to <a id="cashier-mailto-cashier" href="mailto:cashier@clubworldcasinos.com">cashier@clubworldcasinos.com</a></p>
+
+    <ul>
+        <li>A completed verification form.</li>
+        <li>A clear photograph/scan of a photographic ID. This could be a Passport/Driving License etc.</li>
+        <li>A clear photograph/scan of a document addressed to the address you have provided us with, dated within the last three months</li>
+        <li>A clear photograph/scan of any payment cards used on your account. Please ensure that the cards are all signed on the rear.</li>
+    </ul>
+
+    <h2 class="h-spacer">
+        Download the verification form here: <a id="cashier-club-world-verification-form" href="http://verification.clubworldgroup.com/verificationform.pdf"><img src="/Images/Cashier/form.jpg" alt="verification form" /></a>
+    </h2>
+
+    <p>
+        We hold all your details with the highest security. If you have any questions at all regarding this procedure, please do not hesitate to contact our
+        24/7 award winning <a href="@Url.Action("ContactUs", "AboutUs")">customer services team</a>.
+    </p>
+
+    <p>
+        Please note that, apart from Network Progressive Jackpot wins, the maximum withdrawal per week is $5,001.
+        As such, larger cash out requests will be paid out in weekly instalments.
+    </p>
+
+
+</div>
+
+@section FooterScripts{
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+    @Scripts.Render("~/bundles/cashier")
+
+    <script type="text/javascript">
+        var data = {
+            depositMethods: @Html.Raw(Json.Encode(Model.DepositMethods)),
+            withdrawalMethods: @Html.Raw(Json.Encode(Model.WithdrawalMethods))
+            };
+
+        var cashierVM;
+        cashierVM = new cashierViewModel(data);
+
+        ko.applyBindings(cashierVM);
+    </script>
+}

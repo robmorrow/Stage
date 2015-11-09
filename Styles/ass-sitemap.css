@@ -1,0 +1,8 @@
+#sitemap-wrapper {
+  text-align: center; }
+  #sitemap-wrapper .sitemap-container {
+    text-align: left;
+    display: inline-block;
+    margin: auto; }
+  #sitemap-wrapper li {
+    list-style: none; }

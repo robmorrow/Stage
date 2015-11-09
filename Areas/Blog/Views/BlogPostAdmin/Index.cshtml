@@ -1,0 +1,16 @@
+﻿@model CWG.Web.Blog.ViewModels.Admin.BlogPostList
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@if (Model.CanCreate)
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+
+@Html.Partial("_BlogPostList", Model.Posts)

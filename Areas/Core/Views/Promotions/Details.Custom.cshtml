@@ -1,0 +1,165 @@
+﻿@model CWG.Web.Core.Domain.Models.Promotion
+
+@{
+    ViewBag.Title = Model.PageTitle;
+    ViewBag.MetaDescription = Model.MetaDescription;
+}
+
+@section AlternateHeader{
+    <div></div>
+}
+
+@section HeadScripts{
+    <meta name="twitter:card" content="product">
+    <meta name="twitter:site" content="&#64AllStar_Slots"> <meta name="twitter:title" content="@Model.PageTitle">
+    <meta name="twitter:description" content="@Model.MetaDescription["twitter:description"]">
+    <meta name="twitter:image:src" content="@Request.Url.Scheme://@Request.Url.Authority@Model.ImageUrl">
+    <meta property="og:title" content="@Model.PageTitle">
+    <meta property="og:site_name" content="All Star Slots Online Casino">
+    <meta property="og:url" content="@Request.Url.AbsoluteUri">
+    <meta property="og:description" content="@Model.MetaDescription["og:description"]">
+    <meta property="og:image" content="@Request.Url.Scheme://@Request.Url.Authority@Model.ImageUrl" />
+    <meta property="fb:app_id" content="">
+    <meta property="og:type" content="product">
+}
+
+<div id="promotion-wrapper">
+    <p class="h1">@Model.Name Promotion</p>
+    <div class="pure-g">
+        <div class="pure-u-1 promo-image-large promo-image">
+            <div>
+                <img data-bind="attr: { src:ImageUrl }" class="pure-img img-rounded" />
+            </div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="promo-content-box pure-u-1 pure-u-md-1-2">
+            <h1 class="h2 ass-fade h-spacer">@Model.OfferTitle</h1>
+            <div class="promo-content">
+                <div data-bind="html:Description"></div>
+            </div>
+        </div>
+        <div class="promo-content-box pure-u-1 pure-u-md-1-2">
+            <h2 class="ass-fade h-spacer">Coupon Codes</h2>
+            <div class="promo-content">
+                <p>Simply enter this code in the cashier section of the casino as you deposit</p>
+                <div class="promo-coupon shadow-bend-left"><h2 data-bind="text:CouponCode"></h2></div>
+                <!--ko if: AltCouponCode-->
+                <div class="promo-coupon shadow-bend-left"><h2 data-bind="text:AltCouponCode"></h2></div>
+                <!--/ko-->
+            </div>
+        </div>
+        <div class="promo-content-box tall left pure-u-1 pure-u-md-1-2">
+            <h3 class="h2 ass-fade h-spacer">Terms & Conditions</h3>
+            <div class="promo-content">
+                <!--ko if: AltTerms-->
+                <h3 data-bind="text:CouponCode"></h3>
+                <!--/ko-->
+                <div data-bind="html:Terms"></div>
+                <!--ko if: AltTerms-->
+                <h3 data-bind="text:AltCouponCode"></h3>
+                <div data-bind="html:AltTerms"></div>
+                <!--/ko-->
+                <div>All offers are made subject to status, please see casino lobby for promotions available to you.</div>
+            </div>
+        </div>
+        <div class="right  pure-u-1 pure-u-md-1-2">
+            <div class="promo-content-box">
+                <h2 class="h2 ass-fade h-spacer">How To Use A Coupon</h2>
+                <div class="promo-content">
+                    <p>Redeeming a coupon code in the casino couldn't be simpler; simply follow these simple steps to give you, more fun, more chances, more spins, more hands and more money.</p>
+                    <ul>
+                        <li>Download the casino, if you haven't already</li>
+                        <li>Sign up/login to the casino</li>
+                        <li>Go to the cashier by clicking the cashier button</li>
+                        <li>Click the redeem coupons tab</li>
+                        <li>Enter one coupon and the amount you want to deposit</li>
+                    </ul>
+                    <p>That's it, you're all done and ready to play.</p>
+                    <a id="promotions-inner-how-to-use-download" class="ass-download-button visible-md text-center" href="@Url.Action("Index", "Download")">Download Now</a>
+                    <a id="promotions-inner-how-to-use-instant-play" href="http://m.lobby.allstarslots.com" class="ass-download-button hidden-md-inline">Play Now</a>
+                </div>
+            </div>
+            <div class="promo-content-box">
+                <h3 class="h2 ass-fade h-spacer">Spread The Word</h3>
+                <div class="promo-content">
+                    <p>Share this promotion with your friends</p>
+                    <ul class="social">
+                        <li><a id="promotions-inner-facebook" href="https://www.facebook.com/AllStarSlotsCasino"><img src="/Images/Common/footer_facebook.png" /><p>Facebook</p></a></li>
+                        <li><a id="promotions-inner-twitter" href="https://twitter.com/AllStar_Slots"><img src="/Images/Common/footer_twitter.png" /><p>Twitter</p></a></li>
+                        <li><a id="promotions-inner-google-plus" href="https://plus.google.com/+AllstarslotsCasino"><img src="/Images/Common/footer_google.png" /><p>Google+</p></a></li>
+                        <li><a id="promotions-inner-contact-us" href="@Url.Action("ContactUs", "AboutUs", new { Area = "Core" })"><img src="/Images/Common/footer_email.png" /><p>Email</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="promo-image pure-u-1">
+            <div>
+                <p>Welcome Bonus</p>
+                <img src="/Images/Promotions/welcome-offer.jpg" class="pure-img img-rounded" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "welcome-offer" }, new { @class = "ass-button", @id="promotions-inner-welcome-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Monday</p>
+                <img src="/Images/Promotions/monday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "monday-offer" }, new { @class = "ass-button", @id = "promotions-inner-monday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Tuesday</p>
+                <img src="/Images/Promotions/tuesday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "tuesday-offer" }, new { @class = "ass-button", @id = "promotions-inner-tuesday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Wednesday</p>
+                <img src="/Images/Promotions/wednesday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "wednesday-offer" }, new { @class = "ass-button", @id = "promotions-inner-wednesday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Thursday</p>
+                <img src="/Images/Promotions/thursday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "thursday-offer" }, new { @class = "ass-button", @id = "promotions-inner-thursday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Friday</p>
+                <img src="/Images/Promotions/friday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "friday-offer" }, new { @class = "ass-button", @id = "promotions-inner-friday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Weekend</p>
+                <img src="/Images/Promotions/weekend-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "weekend-offer" }, new { @class = "ass-button", @id = "promotions-inner-weekend-more-info" })
+            </div>
+        </div>
+
+        <p class="blurb pure-u-1">
+            After you take advantage of our great online casino welcome bonus, you'll have other opportunities to pad your bankroll with reload bonuses.
+            Like the welcome offer, we have reload specials for slots fans and people who favor other types of casino games as well.
+            These specials vary in match percentages and other terms and conditions, and there are a wide range of them available at different times.
+        </p>
+    </div>
+
+    @section FooterScripts{
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+        @Scripts.Render("~/bundles/promotions-details")
+
+        <script type="text/javascript">
+            var data = @Html.Raw(Json.Encode(Model));
+
+            detailsVM = new detailsViewModel(data);
+
+            ko.applyBindings(detailsVM);
+        </script>
+    }
+</div>

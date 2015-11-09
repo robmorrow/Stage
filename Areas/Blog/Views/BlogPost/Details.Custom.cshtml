@@ -1,0 +1,51 @@
+﻿@using CWG.Web.Core.Extensions
+@model CWG.Web.Blog.ViewModels.BlogPostDetails
+
+@{
+    ViewBag.Title = Model.PageTitle;
+    ViewBag.MetaDescription = Model.MetaDescription;
+}
+
+<div id="blog-post-detail-wrapper" class="ass-container">
+
+    <div class="post-header">
+        <img src="@Model.HeaderImageUrl" class="pure-img" />
+        <div class="overlay"></div>
+        <div class="post-details">
+            <p class="title h1">@Model.Title</p>
+            <p class="by-line">By @Model.Author &#9679; @Model.Created.DateTime.ToRelativeTimeString()</p>
+            
+            @if (Model.Categories.Count > 0)
+            {
+                <p class="category-list">
+                    In @Html.Raw(string.Join(", ", Model.Categories.Select(x => x.Name)))
+                </p>
+            }
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/AllStarSlotsCasino" class="facebook"></a>
+                <a href="https://twitter.com/AllStar_Slots" class="twitter"></a>
+                <a href="https://plus.google.com/+AllstarslotsCasino" class="googleplus"></a>
+                <a href="/about-us/contact-us" class="email"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="blog-content">
+        @Html.Raw(Model.Content)
+    </div>
+
+    <div class="blog-categories">
+        @*blog post category list partial*@
+    </div>
+
+    <div class="blog-related-posts">
+        @*blog post relatated posts partial*@
+    </div>
+
+
+</div>

@@ -1,0 +1,45 @@
+﻿<div class="ass-top-nav">
+    <nav class="pure-menu pure-menu-horizontal content-body">
+        <ul class="pure-menu-list" id="collapsible-navbar">
+            <li class="pure-menu-item menu-button blue-bg">
+
+                <div id="menu-icon" class="left hidden-md">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <a id="top-nav-ass-image" href="@Url.Action("Index", "Home", new { Area = "Core" })" class="left full-width visible-md">
+                    <img src="/Images/Common/logo.png" class="pure-img auto-center" />
+                </a>
+                <div class="hidden-md">
+                    <img src="/Images/Common/logo.png" class="pure-img auto-center" />
+                </div>
+            </li>
+            <li class="pure-menu-item page-link home">
+                <a id="top-nav-home" href="@Url.Action("Index", "Home", new { Area = "Core" })">Home</a>
+            </li>
+            <li class="pure-menu-item page-link promotions">
+                <a id="top-nav-promotions" href="@Url.Action("Index", "Promotions", new { Area = "Core" })">Promotions</a>
+            </li>
+            <li class="pure-menu-item page-link cashier">
+                <a id="top-nav-cashier" href="@Url.Action("Index", "Cashier", new { Area = "Core" })">Cashier</a>
+            </li>
+            <li class="pure-menu-item page-link blog">
+                <a id="top-nav-blog" href="@Url.Action("Index", "BlogPost", new { Area = "Blog" })">Blog</a>
+            </li>
+            <li class="pure-menu-item page-link contact">
+                <a id="top-nav-contact-us" href="@Url.Action("ContactUs", "AboutUs", new { Area = "Core" })">Contact&nbsp;Us</a>
+            </li>
+            <li class="pure-menu-item visible-md">
+                <div class="download-button-container">
+                    <a id="top-nav-download" class="ass-download-button" href="@Url.Action("Index", "Download", new { Area = "Core" })">Download</a>
+                </div>
+            </li>
+            <li class="pure-menu-item instantplay hidden-md">
+                <a id="top-nav-mobile-instant-play" href="http://m.lobby.allstarslots.com">Play Now</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="header-spacer"></div>

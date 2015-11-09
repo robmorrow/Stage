@@ -1,0 +1,6 @@
+﻿@model CWG.Web.Blog.ViewModels.Admin.BlogPostCategory
+
+
+@Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", list = "category-names" } })
+
+@Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })

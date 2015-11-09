@@ -1,0 +1,29 @@
+﻿@model CWG.Web.Core.Domain.Models.TermsPage
+@{
+    ViewBag.Title = "Terms & Conditions - Online Casino | AllStarSlots";
+    ViewBag.MetaDescription = "Read through the All Star Slots Online Casino terms and conditions for all the specific information you need to know about playing at our casino.";
+}
+
+<div id="terms-wrapper" class="ass-container">
+
+    <div class="ass-title">
+        <h1 class="h-spacer">Terms and Conditions</h1>
+        <p>
+            Before acceptance of this agreement, all players should be certain of their right and obligations. If you
+            have any questions or doubts, consult legal council in your jurisdiction.
+        </p>
+    </div>
+
+
+    @foreach (var term in Model.Terms)
+    {
+        <p class="h2 ass-fade h-spacer">
+            @term.Title
+        </p>
+        <div class="ass-content-container">
+            @Html.Raw(term.Content)
+        </div>
+    }
+
+
+</div>

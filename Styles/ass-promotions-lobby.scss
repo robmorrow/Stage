@@ -1,0 +1,90 @@
+﻿body {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+
+    #lobby-promotions-wrapper {
+        width: 400px;
+        margin: auto;
+
+        h3{
+            font-size:18px;
+            font-weight:lighter;
+        }
+
+        h4{
+            font-size:15px;
+            font-weight:lighter;
+        }
+
+        img{
+            margin-top:-10px;
+        }
+
+        h2.coupon{
+            background-image: url(/Images/Promotions/Lobby/couponBg.jpg);
+            background-repeat:no-repeat;
+            background-position:0 0;
+            height:40px;
+            width:430px;
+            background-size:contain;
+            font-size:14px;
+            color: #2E99FB;
+            font-weight:bold;
+            text-align:center;
+            padding-top:25px;
+            margin-left:-15px;
+            padding-bottom:0;
+            margin-bottom:0;
+        }
+
+        h2.button{
+            font-size:14px;
+            font-weight: normal;
+            padding-top:15px;
+            padding-bottom:10px;
+        }
+
+        .button {
+            text-align: center;
+            color: white;
+            background-color: #2E99FB;
+            background-image:url(/Images/Promotions/Lobby/bigBtn.jpg);
+            background-repeat:no-repeat;
+            width:400px;
+            height:22px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            cursor:pointer;
+        }
+
+        .double {
+            .button {
+                display: inline-block;
+                float: left;
+                background-image:url(/Images/Promotions/Lobby/smlBtn.jpg);
+                width:195px;
+                margin-right: 5px;
+                width: 195px;
+
+                &.right {
+                    margin-right: 0;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        p,li{
+            font-size:13px;
+            font-weight:lighter;
+        }
+
+        li{
+            padding-left:20px;
+        }
+    }
+}
+
+.clear {
+    clear: both;
+}

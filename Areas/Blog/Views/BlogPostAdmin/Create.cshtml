@@ -1,0 +1,169 @@
+﻿@model CWG.Web.Blog.ViewModels.Admin.CreateBlogPost
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@section styles{
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    @Styles.Render("~/Blog/Content/css-admin")
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>BlogPost</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PageTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PageTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PageTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MetaDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MetaDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Author, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Author, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Slug, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Slug, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group" data-bind="with:FeaturedImage">
+            @Html.LabelFor(model => model.FeaturedImageUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.FeaturedImageUrl, new { data_bind = "value: imageUrl" })
+                <input type="file" id="featuredImagePicker" data-bind="event: { change: upload.bind($data, $element.files[0])}" />
+                <div data-bind="visible: isUploading">Uploading image...</div>
+                <a data-bind="visible:hasImage, attr: {href: imageUrl}">View Image</a>
+                @Html.ValidationMessageFor(model => model.FeaturedImageUrl, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CategoryNames, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*TODO: Refactor the category editor to use some kind of template*@
+                <div id="category-editor">
+                    @Html.EditorFor(model => model.CategoryNames)
+                </div>
+                <button type="button" class="js more-categories">Add More Categories</button>
+            </div>
+            <datalist id="category-names">
+                @foreach (var catName in Model.AvailableCategoryNames)
+                {
+                    <option value="@catName"></option>
+                }
+            </datalist>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.FeaturedContent, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.FeaturedContent, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FeaturedContent, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group" data-bind="with:HeaderImage">
+            @Html.LabelFor(model => model.HeaderImageUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.HeaderImageUrl, new { data_bind = "value: imageUrl" })
+                <input type="file" id="headerImagePicker" data-bind="event: { change: upload.bind($data, $element.files[0])}" />
+                <div data-bind="visible: isUploading">Uploading image...</div>
+                <a data-bind="visible:hasImage, attr: {href: imageUrl}">View Image</a>
+                @Html.ValidationMessageFor(model => model.HeaderImageUrl, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Content, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "BlogPostAdmin")
+</div>
+
+@section scripts {
+    @Scripts.Render("~/Blog/Bundles/Admin")
+    @Scripts.Render("~/Blog/Bundles/BlogEditor")
+
+    <script type="text/javascript">
+
+        $(function () {
+            cwg.blog.admin.initHtmlEditor("#@Html.IdFor(model => model.Content)");
+        });
+
+        @*TODO: Refactor this code into a separate file and use some kind of template.*@
+        $(function () {
+            var catCount = $("#category-editor > *").length / 2;
+            $("button.more-categories").on("click", function () {
+                $("#category-editor > *:lt(2)")
+                    .clone()
+                    .attr("id", function (index, value) {
+                        return value ? value.replace('0', catCount) : undefined;
+                    })
+                    .attr("name", function (index, value) {
+                        return value ? value.replace('0', catCount) : undefined;
+                    })
+                    .data("valmsg-for", function (index, value) {
+                        return value ? value.replace(/0/g, catCount) : undefined;
+                    })
+                    .appendTo("#category-editor")
+                    .html("")
+                    .val("");
+            });
+        });
+
+        var params = {
+            HeaderImage: {
+                imageUrl: null
+            },
+            FeaturedImage: {
+                imageUrl: null
+            }
+        };
+        //apply knockout binding
+        ko.applyBindings(new ImagesViewModel(params));
+    </script>
+}

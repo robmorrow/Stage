@@ -1,0 +1,38 @@
+﻿@using CWG.Web.Core.Helper
+@using System.Web.Optimization
+@{
+    ViewBag.Title = "Oops! | AllStarSlots";
+}
+
+@section HeadScripts{
+    <link href="/Styles/ass-thankyou.css" rel="stylesheet" />
+    <meta name="robots" content="noindex" />
+}
+
+@section AlternateHeader{
+    @*Empty section are left empty intentionally, so that those sections are not rendered on this page*@
+}
+
+@section AlternateReassuranceStrip{
+}
+
+<div class="content-wrapper">
+    <br />
+    <p>
+        Oops!<br />
+        The page you're looking for isn't here...
+    </p>
+    <p>
+        If you require any help with anything,<br />
+        simply contact our 24/7 customer services.
+    </p>
+
+    <div class="buttons">
+        @Html.ActionLink("Contact Us >", "ContactUs", "AboutUs", null, new { @class = "light-blue bordered", @id="error-page-contact-us" })
+        <br />
+        @Html.ActionLink("< Return To Home", "Index", "Home", null, new { @class = "light-blue bordered",@id = "error-page-home" })
+    </div>
+</div>
+
+@section AlternateFooter{
+}

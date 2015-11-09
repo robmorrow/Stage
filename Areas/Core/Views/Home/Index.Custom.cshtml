@@ -1,0 +1,345 @@
+﻿@model CWG.Web.Core.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Online Slots & Casino - 100% bonus up to $787 | AllStarSlots";
+    ViewBag.MetaDescription = "Play for free or real money. AllStarSlots Online Casino lets you download and install - with a 100% welcome bonus up to $787 for free! Start Winning Today!";
+}
+
+@section AlternateHeader{
+    <header class="ass-main-header">
+        <div class="ass-container content-body height hero-banner-img">
+            <div class="ass-main-header-text">
+                <p class="title title-width">The casino with over 100 jackpots to be won!</p>
+                <p class="text">Get Started With Your</p>
+                <p class="offer">$787 FREE</p>
+                <p class="text">Casino Welcome Bonus</p>
+
+                <div class="ass-download-button-container visible-md">
+                    <a id="home-header-download" class="ass-download-button" href="@Url.Action("Index", "Download", new { Area = "Core" })">Download</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+}
+
+<div id="steps" class="ass-main-header visible-md">
+
+    <div class="content-body ass-container pure-g">
+
+        <!--CTA 1-->
+        <div class="pure-u-1 pure-u-md-7-24 step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <a id="home-steps-download" href="@Url.Action("Index", "Download")">
+                    <h3>Download</h3>
+                    <p>Quick & secure download</p>
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--/CTA 1-->
+
+        <div class="pure-u-1-24 arrow">
+            <img src="/Images/Home/stepbystep_arrow_768-1070.png" class="pure-img" />
+        </div>
+
+        <!--CTA 2-->
+        <div class="pure-u-1 pure-u-md-7-24 step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>Signup</h3>
+                <p>Simple registration</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--/CTA 2-->
+
+        <div class="pure-u-1-24 arrow">
+            <img src="/Images/Home/stepbystep_arrow_768-1070.png" class="pure-img" />
+        </div>
+
+        <!--CTA 3-->
+        <div class="pure-u-1 pure-u-md-7-24 step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>Play & Win</h3>
+                <p>Claim bonus & get started!</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--/CTA 3-->
+        <div class="clear"></div>
+
+    </div>
+
+</div>
+<div id="home-wrapper" class="content-body">
+    <div class="text-center">
+        <p class="h1">Ready, Steady, Fun!</p>
+        <p class="h3">120+ Free Games on your desktop</p>
+    </div>
+
+    <div class="pure-g b-margin ass-preview-image content-body">
+
+        <div class="pure-u-md-1-4 pure-u-sm-1-3 pure-u-1-2">
+            <div class="ass-image-container text-center shadow-bend">
+                <img src="https://cdn1.clubworldgroup.com/game-images/platform-a/medium/countspectacular.jpg" class="pure-img img-rounded-top" />
+                <a>Count Spectacular</a>
+            </div>
+        </div>
+
+        <div class="pure-u-md-1-4 pure-u-sm-1-3 pure-u-1-2">
+            <div class="ass-image-container text-center shadow-bend">
+                <img src="https://cdn1.clubworldgroup.com/game-images/platform-a/medium/builderbeaver.jpg" class="pure-img img-rounded-top" />
+                <a>Builder Beaver</a>
+            </div>
+        </div>
+
+        <div class="pure-u-md-1-4 pure-u-sm-1-3 pure-u-1-2">
+            <div class="ass-image-container text-center shadow-bend">
+                <img src="https://cdn1.clubworldgroup.com/game-images/platform-a/medium/coyotecash.jpg" class="pure-img img-rounded-top" />
+                <a>Coyote Cash</a>
+            </div>
+        </div>
+
+        <div class="pure-u-md-1-4 pure-u-sm-1-3 pure-u-1-2">
+            <div class="ass-image-container text-center shadow-bend">
+                <img src="https://cdn1.clubworldgroup.com/game-images/platform-a/medium/paydirt.jpg" class="pure-img img-rounded-top" />
+                <a>Paydirt!</a>
+            </div>
+        </div>
+
+        <div class="pure-u-md-1-4 pure-u-sm-1-3 pure-u-1-2">
+            <div class="ass-image-container text-center shadow-bend">
+                <img src="https://cdn1.clubworldgroup.com/game-images/platform-a/medium/trex.jpg" class="pure-img img-rounded-top" />
+                <a>T-Rex</a>
+            </div>
+        </div>
+
+        <div class="pure-u-md-1-4 pure-u-sm-1-3 pure-u-1-2">
+            <div class="ass-image-container text-center shadow-bend">
+                <img src="https://cdn1.clubworldgroup.com/game-images/platform-a/medium/bubblebubble.jpg" class="pure-img img-rounded-top" />
+                <a>Bubble Bubble</a>
+            </div>
+        </div>
+
+        <div class="pure-u-md-1-4 pure-u-sm-1-3 pure-u-1-2 visible-inline-md">
+            <div class="ass-image-container text-center shadow-bend">
+                <img src="https://cdn1.clubworldgroup.com/game-images/platform-a/medium/wildwizards.jpg" class="pure-img img-rounded-top" />
+                <a>Wild Wizards</a>
+            </div>
+        </div>
+
+        <div class="pure-u-md-1-4 pure-u-sm-1-3 pure-u-1-2 visible-inline-md">
+            <div class="ass-image-container text-center shadow-bend">
+                <img src="https://cdn1.clubworldgroup.com/game-images/platform-a/medium/tripletwister.jpg" class="pure-img img-rounded-top" />
+                <a>Triple Twister</a>
+            </div>
+        </div>
+
+        <div class="pure-u-1 download-link visible-md">
+            <a id="home-game-section-download" href="@Url.Action("Index", "Download")">Download Casino Now</a>
+        </div>
+
+    </div>
+
+    <hr />
+
+
+
+    <div class="text-center content-body">
+
+        <p class="h3">Fully Verified, Trusted, Secure and accessible</p>
+
+        <ul id="payment-methods" class="pure-g center-block">
+            <li class="pure-u-md-1-4 pure-u-1-2"><img src="/Images/Home/paymentIcons/visa.jpg" class="pure-img" /></li>
+            <li class="pure-u-md-1-4 pure-u-1-2"><img src="/Images/Home/paymentIcons/mastercard.jpg" class="pure-img" /></li>
+            <li class="pure-u-md-1-4 pure-u-1-2"><img src="/Images/Home/paymentIcons/rtg.jpg" class="pure-img" /></li>
+            <li class="pure-u-md-1-4 pure-u-1-2"><img src="/Images/Home/paymentIcons/neteller.jpg" class="pure-img" /></li>
+            <li class="pure-u-md-1-6 pure-u-1-3"><img src="/Images/Home/paymentIcons/veriVisa.jpg" class="pure-img" /></li>
+            <li class="pure-u-md-1-6 pure-u-1-3"><img src="/Images/Home/paymentIcons/masterSecureCode.jpg" class="pure-img" /></li>
+            <li class="pure-u-md-1-6 pure-u-1-3"><img src="/Images/Home/paymentIcons/21.jpg" class="pure-img" /></li>
+            <li class="pure-u-md-1-6 pure-u-1-3"><img src="/Images/Home/paymentIcons/100Secure.jpg" class="pure-img" /></li>
+            <li class="pure-u-md-1-6 pure-u-1-3"><img src="/Images/Home/paymentIcons/skrill.jpg" class="pure-img" /></li>
+            <li class="pure-u-md-1-6 pure-u-1-3">
+                <a id="home-central-dispute-system" href="http://www.centraldisputesystem.com/form.asp?casinoID=507" target="_blank"><img src="/Images/Home/paymentIcons/cds.jpg" class="pure-img" /></a>
+            </li>
+        </ul>
+
+    </div>
+
+    <hr />
+
+    <div class="text-center content-body">
+        <p class="h3">Take it from our users</p>
+    </div>
+
+    <div class="pure-g text-center content-body">
+
+
+        <div class="pure-u-1 pure-u-md-1-3 vox-pop">
+            <img src="/Images/Home/iraFace.jpg" class="pure-img img-circle auto-margin" />
+            <p class="quote">
+                "You guys...and all casinos in this group are well-run, honest...that bears repeating - HONEST!!"
+            </p>
+            <p>
+                <strong>Ira</strong>
+            </p>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3 vox-pop visible-inline-md">
+            <img src="/Images/Home/lisaFace.jpg" class="pure-img img-circle auto-margin" />
+            <p class="quote">
+                "Super easy and hassle free."
+            </p>
+            <p>
+                <strong>Lisa</strong>
+            </p>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3 vox-pop visible-inline-md">
+            <img src="~/Images/Home/rhondaFace.jpg" class="pure-img img-circle auto-margin" />
+            <p class="quote">
+                "Customer Service and Cashiers have been very helpful and professional. Fast on payouts as well."
+            </p>
+            <p>
+                <strong>Rhonda</strong>
+            </p>
+        </div>
+
+    </div>
+
+    <hr />
+
+    <div class="text-center content-body">
+        <p class="h3">How To Get Started</p>
+        <p class="h3">
+            All you need to do is download our easy-to-use software, make a deposit and claim your welcome
+            bonus of up to <strong>$787 for free</strong>. From there, play your favorite games and keep an
+            eye out for our frequent, fun promotions.<br />Heard Enough?
+        </p>
+    </div>
+
+    <div class="pure-g text-center content-body">
+        <div class="pure-u-1 ass-download-button-container">
+            <a id="home-how-to-download" class="ass-download-button visible-md-inline" href="@Url.Action("Index", "Download", new { Area = "Core" })">Download</a>
+            <a id="home-how-to-instant-play" class="ass-download-button hidden-md-inline" href="http://m.lobby.allstarslots.com">Play Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="ass-promotion-container">
+    <div class="content-body pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 text-right">
+            <div class="text-center promo-home-text">
+                <p class="h1">Promotion Today</p>
+                <p class="h3">
+
+                    @Html.Raw(Model.TodaysPromotion.ShortDescription)
+                </p>
+                <p class="h3"><strong>Use Code:</strong></p>                
+                <div class="promo-coupon-container">
+                    <div class="promo-coupon shadow-bend-left"><h4 class="h3">@Model.TodaysPromotion.CouponCode</h4></div>
+                </div>
+                <p>terms & conditions apply</p>
+                <a id="home-promotions-today-view-other-promotions" href="@Url.Action("Index", "Promotions", new { Area = "Core" })" class="h3">View Other Promotions ></a>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 visible-md-inline ass-promotion-image">
+            <img src="/Images/Common/sunglasses.png" />
+        </div>
+    </div>
+</div>
+
+<div class="ass-about-container">
+    <div class="pure-g content-body">
+        <div class="pure-u-1 pure-u-md-2-3">
+            <h1 class="h2-b-margin">About All Star Slots Online Casino</h1>
+            <p class="content">
+                Since 2009, All Star Slots has been offering players a great combination of frequent bonuses, solid games and friendly customer service.
+                Our goal is to offer the best overall experience we can.
+                We do this by focusing on quality, listening to our players and appealing to a wide audience.
+                Lots of different types of players enjoy All Star Slots every single day because we know how to offer a solid experience no matter what you're looking to play.
+            </p>
+        </div>
+        <div class="pure-u-1-3 visible-md-inline">
+            <img src="/Images/Home/aboutAss.png" class="about pure-img" />
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="pure-g content-body">
+        <div class="pure-u-1-3 visible-md-inline">
+            <img src="/Images/Home/onlineSlotsJacks.png" class="jackpots pure-img" />
+        </div>
+        <div class="pure-u-1 pure-u-md-2-3 text-right cancel-text-right">
+            <h2 class="h2-b-margin cancel-text-right">Online Slots and Jackpots</h2>
+            <p class="content-right cancel-text-right">
+                Our collection of more than 75 online slots includes classic slots, video slots and a number of progressives like Cleopatra's Gold, Aztec's Millions, Megasaur and Jackpot Pinatas.
+                These games pay out six-figure and seven-figure jackpots multiple times each year!
+                The Real Series of online slots at All Star Slots Casino include valuable bonus features like free spins and also include special progressives that start at the $250, $500 or $1,000 levels.
+                These smaller progressives can hit on any given spin at random, and they don't require a particular winning combination.
+            </p>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="pure-g content-body">
+        <div class="pure-u-1 pure-u-md-2-3">
+            <h2 class="h2-b-margin">Games and More</h2>
+            <p class="content">
+                Our selection of table games is impressive, so don't let our name fool you.
+                We offer blackjack, roulette, craps, bingo, pontoon, keno and several variations of casino poker.
+                Our video poker selection of more than 15 titles is among the best in the industry.
+            </p>
+        </div>
+        <div class="pure-u-1-3 visible-md-inline">
+            <img src="/Images/Home/gamesMore.png" class="games pure-img" />
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="pure-g content-body">
+        <div class="pure-u-1-3 visible-md-inline">
+            <img src="/Images/Home/quickDownload.png" class="download pure-img" />
+        </div>
+        <div class="pure-u-1 pure-u-md-2-3 text-right cancel-text-right">
+            <h2 class="h2-b-margin cancel-text-right">Quick Download, Fast Software</h2>
+            <p class="content-right cancel-text-right">
+                To top it all off, the All Star Slots software downloads and installs quickly.
+                Because it's been designed from the ground up to provide a good experience for all of our players,
+                you won't have to worry about it slowing down your computer or hogging your system’s resources!
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="application/ld+json">
+    { "@@context" : "http://schema.org",
+    "@@type" : "Organization",
+    "url" : "https://www.allstarslots.com",
+    "logo" : "https://www.allstarslots.com/images/common/logo.png",
+    "contactPoint" : [
+    { "@@type" : "ContactPoint",
+    "telephone" : "+1-866-456-5287",
+    "contactType" : "Customer Service",
+    "contactOption" : "TollFree",
+    "areaServed" : "US"
+    } ] }
+</script>
+<script type="application/ld+json">
+    { "@@context" : "http://schema.org",
+    "@@type" : "Organization",
+    "name" : "All Star Slots",
+    "url" : "https://www.allstarslots.com",
+    "sameAs" : [ "https://www.facebook.com/AllStarSlotsCasino",
+    "https://twitter.com/AllStar_Slots",
+    "https://plus.google.com/+AllstarslotsCasino"]
+    }
+</script>

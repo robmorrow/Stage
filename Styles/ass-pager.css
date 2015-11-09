@@ -1,0 +1,15 @@
+.ass-pager {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .ass-pager ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    .ass-pager ul li {
+      display: inline-block;
+      text-align: center; }
+      .ass-pager ul li.previous {
+        float: left; }
+      .ass-pager ul li.next {
+        float: right; }

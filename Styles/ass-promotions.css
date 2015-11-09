@@ -1,0 +1,132 @@
+.promotion-header {
+  background-color: #f5f6f8;
+  padding-top: 20px;
+  min-height: 500px;
+  text-align: center;
+  position: relative; }
+  .promotion-header > div:first-of-type > * {
+    display: inline-block; }
+  .promotion-header img {
+    position: absolute;
+    bottom: 0; }
+
+.promo-coupon {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: dashed 2px #707070;
+  font-weight: 600;
+  margin-top: 20px;
+  background-color: #EFF8FF;
+  color: #2D98FA; }
+  .promo-coupon :after {
+    content: '';
+    display: block;
+    background-image: url(/Images/Promotions/scissors.png);
+    height: 22px;
+    width: 30px;
+    position: absolute;
+    top: -13px;
+    left: 3px; }
+  .promo-coupon h2 {
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold; }
+
+.promo-coupon-container {
+  height: 76px;
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+  z-index: 1; }
+  .promo-coupon-container h4 {
+    margin: 0;
+    font-weight: bold; }
+
+#promotion-wrapper {
+  /* just restricting these override rules for the promotions page only*/
+  max-width: 970px;
+  margin: auto;
+  margin-top: 20px;
+  /* xs size */
+  /* Small devices (tablets, 768px and up) */
+  /* Medium devices (desktops, 992px and up) */
+  /* Large devices (large desktops, 1200px and up) */ }
+  #promotion-wrapper .ass-content-container img {
+    margin-bottom: 40px; }
+  #promotion-wrapper .blurb {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  #promotion-wrapper .pure-u-1 {
+    position: relative; }
+  #promotion-wrapper .ass-button {
+    position: absolute;
+    right: 50px;
+    bottom: 25px; }
+  #promotion-wrapper .promo-image {
+    position: relative;
+    margin-bottom: 10px;
+    text-align: center;
+    z-index: 1; }
+    #promotion-wrapper .promo-image > div {
+      position: relative;
+      display: inline-block;
+      margin: 10px; }
+    #promotion-wrapper .promo-image p {
+      font-size: 1.4em;
+      margin: 0 0px 5px 0;
+      text-align: left;
+      font-weight: 600; }
+    #promotion-wrapper .promo-image a {
+      z-index: 3;
+      right: 30px;
+      bottom: -25px; }
+  #promotion-wrapper .promo-image-large {
+    margin-top: 20px; }
+  #promotion-wrapper .promo-content-box {
+    height: 450px;
+    padding: 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    #promotion-wrapper .promo-content-box .promo-content {
+      padding-left: 30px;
+      padding-right: 30px; }
+      #promotion-wrapper .promo-content-box .promo-content .social {
+        margin-top: 10px;
+        list-style: none; }
+        #promotion-wrapper .promo-content-box .promo-content .social li {
+          margin: 10px; }
+          #promotion-wrapper .promo-content-box .promo-content .social li img {
+            margin-right: 10px;
+            width: 35px;
+            height: auto; }
+          #promotion-wrapper .promo-content-box .promo-content .social li p {
+            display: inline-block;
+            position: relative;
+            top: -15px; }
+  #promotion-wrapper .left-column-content {
+    max-width: 425px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 50px; }
+  #promotion-wrapper .right-column-content {
+    max-width: 425px;
+    margin-left: 15px;
+    margin-right: 15px; }
+  @media (max-width: 767px) {
+    #promotion-wrapper .ass-button {
+      right: initial;
+      left: 50%;
+      margin-left: -86px; }
+    #promotion-wrapper .h3 {
+      text-align: center; }
+    #promotion-wrapper .left-column-content, #promotion-wrapper .right-column-content {
+      width: auto;
+      margin: auto;
+      float: none; } }

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Blog</title>
+    @RenderSection("styles", required: false)
+
+    @Styles.Render("~/blog/Content/css")
+    @Scripts.Render("~/blog/bundles/modernizr")
+    @Scripts.Render("~/blog/bundles/jquery")
+    @Scripts.Render("~/blog/bundles/bootstrap")
+</head>
+<body>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

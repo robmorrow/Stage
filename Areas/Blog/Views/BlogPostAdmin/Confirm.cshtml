@@ -1,0 +1,15 @@
+﻿@model CWG.Web.Blog.ViewModels.Admin.Confirm
+
+@{
+    ViewBag.Title = "Confirm";
+}
+
+<h2>Confirm</h2>
+
+
+<p>Blog post was @(Model.ConfirmAction == "Delete" ? "deleted" : "saved").</p>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "BlogPostAdmin")
+</div>

@@ -1,0 +1,301 @@
+.promo-home-text {
+  display: inline-block; }
+
+.ass-promotion-container {
+  padding-bottom: 60px;
+  background-color: #f5f6f8; }
+  .ass-promotion-container .text-right {
+    text-align: center; }
+  .ass-promotion-container .promo-home-text {
+    text-align: center; }
+  .ass-promotion-container img {
+    position: absolute;
+    bottom: 0; }
+
+#home-wrapper .ass-image-container {
+  margin: 0 10px 30px 10px; }
+  #home-wrapper .ass-image-container a {
+    display: block;
+    padding: 5px 0;
+    background-color: white;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-weight: 700; }
+
+#home-wrapper ul#payment-methods {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  #home-wrapper ul#payment-methods li img {
+    margin: auto; }
+
+#home-wrapper .ass-download-button-container {
+  margin-top: 97px; }
+
+#home-wrapper .download-link {
+  text-align: center; }
+  #home-wrapper .download-link a {
+    display: block;
+    padding: 0;
+    background-color: white;
+    font-weight: 500;
+    color: #000E31;
+    text-decoration: none; }
+
+.ass-about-container {
+  margin-top: 50px;
+  max-width: 1000px;
+  margin: auto; }
+  .ass-about-container h2, .ass-about-container .h2 {
+    padding-left: 0; }
+  .ass-about-container > div {
+    margin-bottom: 20px; }
+  .ass-about-container img {
+    box-sizing: border-box;
+    padding: 20px; }
+  .ass-about-container .text-right {
+    text-align: right; }
+  .ass-about-container .cancel-text-right {
+    text-align: left; }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #steps {
+    margin-top: -2px;
+    color: white;
+    margin: auto;
+    height: 114px; }
+    #steps .ass-container {
+      background-size: contain;
+      background-image: url(/Images/Home/steps_bg.png); }
+    #steps .step {
+      float: left;
+      border: solid 2px #fff;
+      border-radius: 5px;
+      margin: 10px 0 10px 0;
+      padding: 15px 0 15px 8px;
+      height: 50px; }
+      #steps .step .step-content {
+        float: left; }
+        #steps .step .step-content a, #steps .step .step-content a:visited, #steps .step .step-content a:hover, #steps .step .step-content a:active {
+          color: white;
+          text-decoration: none; }
+        #steps .step .step-content h3 {
+          margin: 0;
+          padding: 0;
+          font-weight: normal; }
+        #steps .step .step-content p {
+          margin: 0;
+          padding: 0; }
+    #steps .arrow {
+      float: left; }
+    #steps .step-number {
+      float: left;
+      font-size: 2.4em;
+      border: solid 2px #fff;
+      border-radius: 5px;
+      display: block;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: bold;
+      height: 50px;
+      width: 50px;
+      line-height: 50px; }
+    #steps .arrow {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      width: 20px;
+      height: 54px;
+      margin-left: 3px;
+      margin-right: 3px; }
+    #steps a, #steps a:visited, #steps a:hover, #steps a:active {
+      color: white; }
+    #steps .step-content {
+      float: left;
+      height: 50px;
+      line-height: 20px;
+      padding: 5px 0 5px 0;
+      font-size: 0.70em; }
+    #steps h3 {
+      font-size: 1.5em; }
+    #steps p {
+      font-size: 1em; }
+  .ass-promotion-container {
+    padding-bottom: 0;
+    height: 550px; }
+    .ass-promotion-container .h1 {
+      margin-top: 70px;
+      margin-bottom: 70px; }
+    .ass-promotion-container .ass-promotion-image {
+      height: 550px; }
+  .h3, h3 {
+    font-weight: 400;
+    font-size: 1.714em;
+    line-height: 1.714em;
+    /*margin-bottom:60px;*/
+    margin-top: 0; }
+  img.about {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    padding: 0; }
+  img.jackpots {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    padding: 0; }
+  img.games {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    padding: 0; }
+  img.download {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    padding: 0; }
+  .ass-about-container .cancel-text-right {
+    text-align: right; } }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #steps .step {
+    margin: 10px 0 10px 0;
+    padding: 20px 0 20px 9px;
+    height: 50px; }
+  #steps .step-number {
+    font-size: 2.4em;
+    height: 50px;
+    width: 50px;
+    line-height: 50px; }
+  #steps .step-content {
+    height: 50px;
+    line-height: 10px;
+    padding: 0 0 5px 0; }
+  #steps h3 {
+    font-size: 2em; }
+  #steps p {
+    font-size: 1.5em; }
+  #steps .arrow {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 26px;
+    height: 70px; }
+  .h3, h3 {
+    font-weight: 400;
+    font-size: 1.714em;
+    line-height: 1.714em;
+    /*margin-bottom:60px;*/
+    margin-top: 0; }
+  .ass-promotion-container {
+    height: 550px;
+    padding-bottom: 0; }
+    .ass-promotion-container .h1 {
+      margin-top: 70px;
+      margin-bottom: 70px; }
+    .ass-promotion-container .ass-promotion-image {
+      height: 550px; }
+  img.about {
+    position: absolute;
+    top: -10px;
+    right: 100px;
+    padding: 0; }
+  img.jackpots {
+    position: absolute;
+    top: -10px;
+    left: 50px;
+    padding: 0; }
+  img.games {
+    position: absolute;
+    top: -30px;
+    right: 40px;
+    padding: 0; }
+  img.download {
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    padding: 0; }
+  .ass-about-container .cancel-text-right {
+    text-align: right; } }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #steps {
+    height: 140px; }
+    #steps .ass-container {
+      width: 950px;
+      min-width: 950px;
+      padding-left: 0;
+      padding-right: 0; }
+    #steps .step {
+      margin: 10px 0 10px 0;
+      padding: 25px 8px 25px 15px;
+      width: 260px;
+      height: 65px;
+      border-radius: 10px; }
+    #steps .step-number {
+      font-size: 2.4em;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      border-radius: 10px; }
+    #steps .step-content {
+      height: 50px;
+      line-height: 25px;
+      padding: 0 5px 5px 0; }
+    #steps h3 {
+      font-size: 2em; }
+    #steps p {
+      font-size: 1.5em; }
+    #steps .arrow {
+      padding: 25px 9px 25px 9px;
+      margin: 10px 0 10px 0;
+      width: 26px;
+      height: 70px; }
+  .h3, h3 {
+    font-weight: 400;
+    font-size: 1.714em;
+    line-height: 1.714em;
+    /*margin-bottom:60px;*/
+    margin-top: 0; }
+  .download-link {
+    margin-top: 10px; }
+  #home-wrapper .vox-pop {
+    margin-bottom: 0; }
+    #home-wrapper .vox-pop p.quote {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding-left: 40px;
+      padding-right: 40px; }
+  #home-wrapper .ass-download-button-container {
+    margin-top: 0; }
+  .ass-promotion-container {
+    height: 550px;
+    padding-bottom: 0; }
+    .ass-promotion-container .h1 {
+      margin-top: 70px;
+      margin-bottom: 70px; }
+    .ass-promotion-container .ass-promotion-image {
+      height: 550px; }
+  img.about {
+    position: absolute;
+    top: -10px;
+    right: 100px;
+    padding: 0; }
+  img.jackpots {
+    position: absolute;
+    top: -10px;
+    left: 50px;
+    padding: 0; }
+  img.games {
+    position: absolute;
+    top: -30px;
+    right: 40px;
+    padding: 0; }
+  img.download {
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    padding: 0; }
+  .ass-about-container .cancel-text-right {
+    text-align: right; } }

@@ -1,0 +1,120 @@
+﻿#contact-us-wrapper {
+
+    dt {
+        font-weight: normal;
+    }
+
+    label {
+        margin-bottom:10px;
+        display:inline-block;
+    }
+
+    .live-chat-button {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .left-col {
+        
+    }
+    
+
+    .right-col {
+
+        &.contact {
+            min-width:305px;        
+        }    
+    }
+
+    .send-button {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .field-validation-error {
+        color:#ff0000;
+        float:right;
+    }
+
+    div[class*=' pure-u-'] {
+
+        p {
+            margin: 0 10px 10px 0;
+            padding-top: 0;
+        }
+
+        div > input, textarea {
+            margin-bottom: 20px;
+            border: solid 1px rgb(240, 240, 240);
+            border-radius: 6px;
+            box-shadow: inset 1.5px 2.598px 0 0 rgba(0, 0, 0, 0.03);
+            width: 98%;
+        }
+
+        div > input {
+            height: 48px;
+        }
+
+        div > textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            display: block;
+            float: right;
+        }
+    }
+
+
+
+    .ass-content-container {
+        margin-bottom: 50px;
+    }
+
+    
+    .bordered {
+            color: #2F9BFF;            
+            border-radius: 6px;
+            border: 2px solid#2F9BFF;              
+            margin-top:10px;
+            padding: 20px 0 20px 0;
+            max-width:280px;
+            font-size:20px;
+            font-weight:400;
+
+            span {
+                display:inline-block;
+                width:70px;           
+                margin-left:35px;
+            }
+    }
+    
+    
+    /* xs size */
+    @media (max-width:767px) {
+
+        div[class*=' pure-u-'] {
+
+            p {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width:768px) {
+    }
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+       .right-col {    
+            div.right {
+               float:right;
+               display:inline-block;
+            }
+        }
+    }
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+    }
+}

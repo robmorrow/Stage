@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="sitemap-wrapper">
+    <div class="sitemap-container">
+        <ul>
+            <li>
+                @Html.ActionLink("Home", "Index", "Home", new { @id="sitemap-home" })
+            </li>
+            <li>
+                @Html.ActionLink("Promotions", "Index", "Promotions", new { @id = "sitemap-promotions" })
+                <ul>
+                    <li>
+                        @Html.ActionLink("Welcome Offer", "Details", new { controller = "Promotions", promotionName = "welcome-offer" }, new { @id = "sitemap-welcome-offer" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Monday", "Details", new { controller = "Promotions", promotionName = "monday-offer" }, new { @id = "sitemap-monday-offer" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Tuesday", "Details", new { controller = "Promotions", promotionName = "tuesday-offer" }, new { @id = "sitemap-tuesday-offer" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Wednesday", "Details", new { controller = "Promotions", promotionName = "wednesday-offer" }, new { @id = "sitemap-wednesday-offer" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Thursday", "Details", new { controller = "Promotions", promotionName = "thursday-offer" }, new { @id = "sitemap-thursday-offer" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Friday", "Details", new { controller = "Promotions", promotionName = "friday-offer" }, new { @id = "sitemap-friday-offer" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Weekend", "Details", new { controller = "Promotions", promotionName = "weekend-offer" }, new { @id = "sitemap-weekend-offer" })
+                    </li>
+                </ul>
+            </li>
+            <li>
+                @Html.ActionLink("Cashier", "Index", "Cashier", new { @id = "sitemap-cashier" })
+            </li>
+            <li>
+                @Html.ActionLink("Contact Us", "ContactUs", "AboutUs", new { @id = "sitemap-contact-us" })
+            </li>
+            <li>
+                <a id="sitemap-blog" href="@Url.Action("Index", "BlogPost", new { area = "Blog" })">Blog</a>
+            </li>
+            <li>
+                @Html.ActionLink("Responsible Gambling", "Index", "ResponsibleGambling", new { @id = "sitemap-responsible-gambling" })
+            </li>
+            <li>
+                @Html.ActionLink("Terms & Conditions", "Index", "TermsConditions", new { @id = "sitemap-terms-and-conditions" })
+            </li>
+            <li>
+                @Html.ActionLink("Download Casino", "Index", "Download", new { @id = "sitemap-download-casino" })
+            </li>
+            <li>
+                <a href="http://www.affiliateedge.com/" id="sitemap-affiliate-edge">Become An Affiliate</a>
+            </li>
+        </ul>
+    </div>
+</div>

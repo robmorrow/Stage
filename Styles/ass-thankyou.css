@@ -1,0 +1,47 @@
+html {
+  /*Transparent bacground seems to become black in chromium so a bacground color is needed.*/
+  background-color: #ffffff; }
+
+html, body, h1 {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+.header {
+  background-color: #0e1b31;
+  text-align: center;
+  padding: 40px; }
+  .header h1 {
+    color: #fff; }
+  .header img {
+    margin-bottom: 40px; }
+
+.content-wrapper {
+  max-width: 550px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em; }
+
+.small {
+  font-size: 0.6em; }
+
+p {
+  margin-top: 40px;
+  font-size: 0.8em; }
+
+.buttons {
+  margin-top: 40px; }
+
+a {
+  text-decoration: none; }
+  a.download {
+    color: #0e1b31;
+    font-weight: bold; }
+  a.light-blue {
+    color: #2F9BFF;
+    display: block;
+    width: 260px;
+    margin: auto;
+    padding: 20px; }
+  a.bordered {
+    border-radius: 6px;
+    border: 2px solid #2F9BFF; }

@@ -1,0 +1,97 @@
+﻿#cashier-wrapper { /* just restricting these override rules for the cahier page only*/
+    img {
+        vertical-align: middle;
+    }
+
+    ul {
+        li {
+            margin-top: 20px;
+        }
+    }
+
+    .payment-item {
+        position: relative;
+
+        .metric-entry {
+            margin-bottom: 16px;
+
+            .metric-bar {
+                background-color: #EFEFEF;
+                box-shadow: 1px 1px 1px #DDDDDD inset;
+                padding-right:6px;
+                height: 20px;
+                display: block;
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+                width: auto;
+                letter-spacing:-4px;
+
+                .bar, .granular {
+                    display: inline-block;
+                    background-color: #2F9BFE;
+                    box-shadow: 1px 1px 1px #92C9FF inset;
+                    margin: 3px 3px 3px 3px;
+                    height: 15px;
+                    border-radius: 8px;
+                }
+
+                .granular {
+                    margin:3px 0 3px 3px;
+                    width: 15px;
+                }
+            }
+
+            .metric-post-label {
+                display: block;
+                width: 100px;
+                height: 30px;
+                background-color: #EFEFEF;
+                border-radius: 10px;
+                text-align: center;
+                padding-top: 5px;
+                float: right;
+                position: relative;
+                top: -5px;
+                margin-left: 10px;
+            }
+
+            .metric-post-label::after {
+                content: "";
+                position: absolute;
+                left: -5px;
+                top: 9px;
+                width: 0;
+                height: 0;
+                border-top: 6px solid transparent;
+                border-bottom: 6px solid transparent;
+                border-right: 6px solid #EFEFEF;
+            }
+
+            .metric-pre-label {
+                float: left;
+                display: block;
+                width: 80px;
+            }
+
+            .metric-image {
+                margin-right: 10px;
+            }
+        }
+    }
+    /* xs size */
+    @media (max-width:767px) {
+        .metric-image{
+            display:none;
+        }
+    }
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width:768px) {
+    }
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+    }
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+    }
+}

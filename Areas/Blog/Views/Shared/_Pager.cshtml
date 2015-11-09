@@ -1,0 +1,39 @@
+﻿@model CWG.Web.Blog.ViewModels.Pager
+
+@helper PageUrl(int page) {
+    var pagerRouteData = new { page = page };
+
+    @Url.RouteUrl(pagerRouteData)
+}
+
+<nav class="ass-pager">
+    <ul>
+        @if (Model.CurrentPage > 1)
+        {
+            @*TODO: Refactor this to work with URLs that have query string parameters if that is required.*@
+            <li class="previous"><a href="@PageUrl(Model.CurrentPage - 1)">Previous</a></li>
+        }
+        @if (Model.TotalPageCount > 1)
+        {
+            for (int page = 1; page <= Model.TotalPageCount; ++page)
+            {
+                <li>
+                    @if (@Model.CurrentPage == page)
+                    {
+                        <span>@page</span>
+                    }
+                    else
+                    {
+                        @*TODO: Refactor this to work with URLs that have query string parameters if that is required.*@
+                        <a href="@PageUrl(page)">@page</a>
+                    }
+                </li>
+            }
+        }
+        @if (Model.CurrentPage < Model.TotalPageCount)
+        {
+            @*TODO: Refactor this to work with URLs that have query string parameters if that is required.*@
+            <li class="next"><a href="@PageUrl(Model.CurrentPage + 1)">Next</a></li>
+        }
+    </ul>
+</nav>

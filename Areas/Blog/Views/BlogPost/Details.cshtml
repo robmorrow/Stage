@@ -1,0 +1,44 @@
+﻿@model CWG.Web.Blog.ViewModels.BlogPostDetails
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+<div class="blog-details-header">
+
+    <div>
+        <img src="@Model.HeaderImageUrl" />
+        <p class="title">@Model.Title</p>
+        <p class="by-line">@Model.Author</p>
+        <p class="date">@Model.Updated</p>
+        <ul class="category">
+            @foreach (var cat in Model.Categories)
+            {
+                <li>@cat.Name</li>
+            }
+        </ul>
+    </div>
+
+    <div class="social-icons">
+        <img src="http://placehold.it/25x25" />
+        <img src="http://placehold.it/25x25" />
+        <img src="http://placehold.it/25x25" />
+        <img src="http://placehold.it/25x25" />
+    </div>
+
+</div>
+
+<div class="blog-content">
+    @Html.Raw(Model.Content)
+</div>
+
+<div class="blog-categories">
+    @*blog post category list partial*@
+</div>
+
+<div class="blog-related-posts">
+    @*blog post relatated posts partial*@
+</div>
+

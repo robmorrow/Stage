@@ -1,0 +1,155 @@
+﻿@model CWG.Web.Core.ViewModels.PromotionsViewModel
+@{
+    ViewBag.Title = "Casino Bonus & Promotions Offers | AllStarSlots";
+    ViewBag.MetaDescription = "The best online casino promotions for you at AllStarSlots casino! Check out our welcome offers, daily specials & limited deals on the promotions page here!";
+}
+
+@section AlternateHeader{
+    @{
+        var today = Model.TodaysPromotion;
+        <div class="promotion-header">
+            <div class="ass-container pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <div>
+                        <p class="h1">@today.Name</p>
+                        @Html.Raw(today.Description)
+                        <h3>Use Code:</h3>
+                        <div class="promo-coupon-container">
+                            <div class="promo-coupon shadow-bend-left"><h4 class="h3">@today.CouponCode</h4></div>
+                        </div>
+                        <h3>terms & conditions apply</h3>
+                        <p class="h2">@Html.ActionLink("More Info", "Details", new { promotionName = $"{today.Name.ToLower()}-offer" }, new { @id="promotions-header-today-more-info" })</p>
+                    </div>
+                </div>
+                <div class="visible-md-inline pure-u-1 pure-u-md-1-2">
+                    <img src="~/Images/Common/sunglasses.png" class="pure-img" />
+                </div>
+            </div>
+        </div>
+    }
+}
+
+<div id="promotion-wrapper" class="ass-container mainpage">
+    <p class="h2 header ass-fade h-spacer">Casino Welcome Bonus</p>
+
+    <div class="promo-image pure-u-1">
+        <div>
+            <img src="/Images/Promotions/welcome-offer.jpg" class="pure-img img-rounded" />
+            @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "welcome-offer" }, new { @class = "ass-button", @id="promotions-welcome-more-info"})
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <p>
+                We offer lots of different kinds of promotions to appeal to a wide audience, and this includes bonuses for both slots players and people who prefer other types
+                of online casino games. If you're a slots fan, then you can get a 100% match on your initial deposit worth a maximum of $787 with the ALLSTAR1 coupon code. If you
+                prefer other games, then you can use ALLSTAR2 on your first deposit to get a 100% match worth as much as $150.
+            </p>
+            <p>
+                No matter if you claim the slots offer or the offer for other games, you'll have a great opportunity to double your deposit and improve you changes of winning.
+            </p>
+        </div>
+    </div>
+
+    <h1 class="h2 header ass-fade h-spacer">Casino Daily Promotions</h1>
+
+    <div class="pure-g">
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Monday</p>
+                <img src="/Images/Promotions/monday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "monday-offer" }, new { @class = "ass-button", @id = "promotions-monday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Tuesday</p>
+                <img src="~/Images/Promotions/tuesday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "tuesday-offer" }, new { @class = "ass-button", @id = "promotions-tuesday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Wednesday</p>
+                <img src="/Images/Promotions/wednesday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "wednesday-offer" }, new { @class = "ass-button", @id = "promotions-wednesday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Thursday</p>
+                <img src="/Images/Promotions/thursday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "thursday-offer" }, new { @class = "ass-button", @id = "promotions-thursday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Friday</p>
+                <img src="/Images/Promotions/friday-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "friday-offer" }, new { @class = "ass-button", @id = "promotions-friday-more-info" })
+            </div>
+        </div>
+        <div class="promo-image pure-u-1 pure-u-md-1-2">
+            <div>
+                <p>Weekend</p>
+                <img src="/Images/Promotions/weekend-offer.jpg" class="pure-img img-rounded center-block" />
+                @Html.ActionLink("More Info", "Details", "Promotions", new { promotionName = "weekend-offer" }, new { @class = "ass-button", @id = "promotions-weekend-more-info" })
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g ass-content-container">
+        <div class="pure-u-1">
+            <p>
+                After you take advantage of our great online casino welcome bonus, you'll have other opportunities to pad your bankroll
+                with reload bonuses. Like the welcome offer, we have reload specials for slots fans and people who favor other types of
+                casino games as well. These specials vary in match percentages and other terms and conditions, and there are a wide
+                range of them available at different times.
+            </p>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2">
+            <h2 class="h2 header ass-fade h-spacer">Free Spins</h2>
+            <div class="left-column-content">
+                <p>
+                    We'll occasionally offer players chances to earn free spins for play on some of our most popular slots. After
+                    claiming one of these offers you'll be asked to play through them before being able to play real money spins
+                    on the game of choice. Your winnings can be subject to wagering requirements depending on the specific promotion,
+                    but they'll always add extra value to your account while giving you free opportunities to experience some of the
+                    hottest games we have to offer.
+                </p>
+                <img src="/Images/Promotions/freeSpins.jpg" class="pure-img img-rounded" />
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <h2 class="h2 header ass-fade h-spacer">Cashback Rewards</h2>
+            <div class="right-column-content">
+                <p>
+                    Another type of offer we have available sometimes is a cashback reward. This will typically take place over a
+                    24-hour period, and it gives you an opportunity to get back a percentage of your net cash losses on non-progressive
+                    titles. If you take part in a cashback reward promotion, make sure to send an email to the support team at
+                    promotions@allstarslots.com to have your reward added to your account since they have to be added manually at a
+                    time of your choosing before they expire.
+                </p>
+                <img src="/Images/Promotions/rewards.jpg" class="pure-img img-rounded" />
+            </div>
+        </div>
+    </div>
+
+    <h2 class="h2 header ass-fade h-spacer">Free Chips</h2>
+    <div class="ass-content-container">
+        <div class="">
+            <p>
+                Sometimes players will qualify for free chips. These work like reload bonuses that do not require a deposit, and they have
+                accompanying wagering requirements and other terms and conditions. These are a great way to get a free chance to run up
+                some winnings without having to risk anything of your own, and they're a favorite among our players. Like the cashback
+                rewards, these will typically require that you email customer service at promotions@allstarslots.com to have the free
+                chip added to your account manually before the promotional period is over with and expires.
+            </p>
+        </div>
+    </div>
+
+</div>

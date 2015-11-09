@@ -1,0 +1,83 @@
+﻿@using System.Web.Optimization
+@using CWG.Web.Core.Helper
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <link rel="SHORTCUT ICON" href="images/common/favicon.ico" />
+    <meta name="description" content="@ViewBag.MetaDescription" />
+
+    <title>@ViewBag.Title</title>
+
+    @Html.CanonicalUrl()
+
+    <!--Bootstrap-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    @Styles.Render("~/Bundles/PureCss")
+    @Styles.Render("~/Bundles/PureCssResponsive")
+    @Styles.Render("~/bundles/website")
+    @RenderSection("HeadScripts", required: false)
+</head>
+<body>
+
+    <!-- Google Tag Manager -->
+    @Html.Partial("_GoogleTagManager")
+    @Scripts.Render("~/bundles/analytics")
+    <!-- End Google Tag Manager -->
+
+    <!-- since this will (probably) be a big block of code, probably easier to put in a partial? -->
+
+    @if (IsSectionDefined("AlternateNav"))
+    {
+        @RenderSection("AlternateNav")
+    }
+    else
+    {
+        @Html.Partial("_TopNav")
+    }
+
+    <!-- Header -->
+    @if (IsSectionDefined("AlternateHeader"))
+    {
+        @RenderSection("AlternateHeader")
+    }
+    else
+    {
+        @Html.Partial("_SiteHeader")
+    }
+
+    <!-- End Header -->
+    @if (IsSectionDefined("AlternateReassuranceStrip"))
+    {
+        @RenderSection("AlternateReassuranceStrip")
+    }
+    else
+    {
+        @Html.Partial("_ReassuranceStrip")
+    }
+
+    <!-- Page Content -->
+    <main>
+        @RenderBody()
+    </main>
+    <!-- End Page Content -->
+
+    @if (IsSectionDefined("AlternateFooter"))
+    {
+        @RenderSection("AlternateFooter")
+    }
+    else
+    {
+        @Html.Partial("_Footer")
+    }
+
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("FooterScripts", required: false)
+
+</body>
+
+</html>

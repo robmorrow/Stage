@@ -1,0 +1,51 @@
+﻿@using CWG.Web.Core.Helper
+
+@{
+    ViewBag.Title = "Thank You For Downloading AllStarSlots Casino | AllStarSlots";
+}
+
+@section HeadScripts{
+    <link href="/Styles/ass-thankyou.css" rel="stylesheet" />
+}
+
+@section AlternateNav{
+    <div class="header">
+        <img src="~/Images/Common/logo.png" />
+        <h1>Thank you for downloading!</h1>
+    </div>
+}
+
+@section AlternateHeader{
+    @*Empty section are left empty intentionally, so that those sections are not rendered on this page*@
+}
+
+@section AlternateReassuranceStrip{
+}
+
+<div class="content-wrapper">
+
+    <p>
+        <span id="message">If your download doesn't begin within</span>
+        <span id="counter">10</span>
+        <span id="increment">seconds</span>
+        @Html.ActionLink("click here", "DownloadCasino", "Download", new { @id="download-thank-you-force-download" })
+        <br />
+        <span class="small">(You may have to confirm the download from a menu that has appeared in your browser)</span>
+    </p>
+
+
+    <p>
+        If you require any help downloading the software,<br />
+        simply contact our 24/7 customer services.
+    </p>
+
+    <div class="buttons">
+        @Html.ActionLink("Contact Us >", "ContactUs", "AboutUs", null, new { @class = "light-blue bordered", @id="download-thank-you-contact-us"})
+
+        @Html.ActionLink("< Return To Home", "Index", "Home", null, new { @class = "light-blue", @id="download-thank-you-home" })
+    </div>
+</div>
+
+@section AlternateFooter{
+    @Scripts.Render("~/bundles/thankyou");
+}
